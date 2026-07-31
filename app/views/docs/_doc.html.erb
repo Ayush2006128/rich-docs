@@ -1,12 +1,9 @@
-<div id="<%= dom_id doc %>">
-  <div>
-    <strong>Title:</strong>
-    <%= doc.title %>
+<div id="<%= dom_id doc %>" class="flex flex-col justify-center">
+  <div class="items-center p-5">
+    <p cless="text-xl font-bold m-4"><%= doc.title %></p>
   </div>
 
-  <div>
-    <strong>Content:</strong>
+  <div class="items-center jistify-center mt-2">
     <%= doc.content %>
   </div>
-
 </div>
