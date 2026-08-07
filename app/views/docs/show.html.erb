@@ -1,10 +1,13 @@
-<p style="color: green"><%= notice %></p>
+<% content_for :title, @doc.title.presence || "Untitled document" %>
 
-<%= render @doc %>
+<div class="mx-auto max-w-3xl px-6 py-12">
+  <article class="rounded-lg bg-white p-8 shadow-sm ring-1 ring-slate-200">
+    <%= render @doc %>
+  </article>
 
-<div>
-  <%= link_to "Edit this doc", edit_doc_path(@doc) %> |
-  <%= link_to "Back to docs", docs_path %>
-
-  <%= button_to "Destroy this doc", @doc, method: :delete %>
+  <div class="mt-6 flex items-center gap-4 text-sm font-medium">
+    <%= link_to "Edit this doc", edit_doc_path(@doc), class: "rounded-md bg-blue-600 px-4 py-2 text-white hover:bg-blue-700" %>
+    <%= link_to "Back to docs", docs_path, class: "text-slate-600 hover:text-slate-900" %>
+    <%= button_to "Destroy this doc", @doc, method: :delete, class: "ml-auto rounded-md px-4 py-2 text-red-600 ring-1 ring-red-200 hover:bg-red-50" %>
+  </div>
 </div>

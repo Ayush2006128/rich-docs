@@ -1,2 +1,50 @@
-<h1 class="text-2xl font-bold">Rich Docs</h1>
-<p class="text-sm mt-4">No fuss document editing</p>
+<% content_for :title, "Rich Docs — No fuss document editing" %>
+
+<section class="px-6 py-20 sm:py-28">
+  <div class="mx-auto max-w-3xl text-center">
+    <p class="inline-flex items-center gap-2 rounded-full bg-blue-50 px-3 py-1 text-xs font-medium text-blue-700 ring-1 ring-blue-200">
+      Rich text, powered by Action Text
+    </p>
+    <h1 class="mt-6 text-4xl font-bold tracking-tight text-slate-900 sm:text-6xl">
+      Write, format and share documents in seconds
+    </h1>
+    <p class="mt-6 text-lg text-slate-600">
+      Rich Docs is a no fuss document editor. Open a blank page, start typing and everything is saved for you — no setup, no clutter.
+    </p>
+    <div class="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
+      <%= link_to "Start a new doc", new_doc_path, class: "w-full rounded-md bg-blue-600 px-6 py-3 text-center text-sm font-semibold text-white shadow-sm hover:bg-blue-700 sm:w-auto" %>
+      <%= link_to "Browse your docs", docs_path, class: "w-full rounded-md px-6 py-3 text-center text-sm font-semibold text-slate-700 ring-1 ring-slate-300 hover:bg-slate-50 sm:w-auto" %>
+    </div>
+  </div>
+</section>
+
+<section class="border-t border-slate-200 bg-slate-50 px-6 py-16">
+  <div class="mx-auto grid max-w-5xl gap-8 sm:grid-cols-3">
+    <div class="rounded-lg bg-white p-6 shadow-sm ring-1 ring-slate-200">
+      <h2 class="text-base font-semibold text-slate-900">Rich formatting</h2>
+      <p class="mt-2 text-sm text-slate-600">
+        Headings, lists, quotes and attachments through a familiar toolbar — no markdown to memorise.
+      </p>
+    </div>
+    <div class="rounded-lg bg-white p-6 shadow-sm ring-1 ring-slate-200">
+      <h2 class="text-base font-semibold text-slate-900">Everything in one place</h2>
+      <p class="mt-2 text-sm text-slate-600">
+        Every document lives in a single list, sorted so the one you touched last is the one you see first.
+      </p>
+    </div>
+    <div class="rounded-lg bg-white p-6 shadow-sm ring-1 ring-slate-200">
+      <h2 class="text-base font-semibold text-slate-900">Attach anything</h2>
+      <p class="mt-2 text-sm text-slate-600">
+        Drop images and files straight into a document and they are stored alongside it.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="px-6 py-16">
+  <div class="mx-auto flex max-w-3xl flex-col items-center gap-4 rounded-lg bg-slate-900 px-8 py-10 text-center">
+    <h2 class="text-2xl font-semibold text-white">Your next document is one click away</h2>
+    <p class="text-sm text-slate-300">No accounts, no templates to pick. Just a blank page.</p>
+    <%= link_to "Create a document", new_doc_path, class: "rounded-md bg-white px-6 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-100" %>
+  </div>
+</section>

@@ -1,9 +1,8 @@
-<div id="<%= dom_id doc %>" class="flex flex-col justify-center">
-  <div class="items-center p-5">
-    <p cless="text-xl font-bold m-4"><%= doc.title %></p>
-  </div>
+<div id="<%= dom_id doc %>">
+  <h2 class="text-xl font-semibold text-slate-900"><%= doc.title.presence || "Untitled document" %></h2>
+  <p class="mt-1 text-xs text-slate-500">Updated <%= time_ago_in_words doc.updated_at %> ago</p>
 
-  <div class="items-center jistify-center mt-2">
+  <div class="prose prose-slate mt-4 max-w-none">
     <%= doc.content %>
   </div>
 </div>

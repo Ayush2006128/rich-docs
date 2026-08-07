@@ -1,11 +1,11 @@
 <% content_for :title, "New doc" %>
 
-<h1>New doc</h1>
+<div class="mx-auto max-w-3xl px-6 py-12">
+  <h1 class="text-3xl font-bold tracking-tight">New doc</h1>
 
-<%= render "form", doc: @doc %>
+  <%= render "form", doc: @doc %>
 
-<br>
-
-<div>
-  <%= link_to "Back to docs", docs_path %>
+  <div class="mt-6 text-sm">
+    <%= link_to "Back to docs", docs_path, class: "text-slate-600 hover:text-slate-900" %>
+  </div>
 </div>
